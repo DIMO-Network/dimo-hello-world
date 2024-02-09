@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# DIMO Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to showcase how an application can login with DIMO by interacting with the [DIMO Auth Server](https://auth.dev.dimo.zone).
+
+For more detailed information on how to interact with DIMO's API, please visit our [Developer Platform](https://docs.dimo.zone/developer-platform).
+
+## Setup
+Setup an `.env` file under the root directory according to your registered `client_id` and `redirect_uri`. If you need help understanding what these mean, please refer to our authentication section under [Developer Platform](https://docs.dimo.zone/developer-platform).
+
+Your `.env` file should look something like this:
+
+```
+REACT_APP_CLIENT_ID=<client_id>
+REACT_APP_REDIRECT_URI=<redirect_uri>
+REACT_APP_AUTH_URL=https://auth.dev.dimo.zone
+```
+
+::: warning
+You might also need to allow CORS on your browser by installing some browser extensions to help troubleshoot.
+:::
 
 ## Available Scripts
 
@@ -9,10 +26,13 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8002](http://localhost:8002) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+
+::: warning
+You may also see any lint errors in the console. Due to this being the development mode in React, double invocation of the Auth token endpoint will happen, resulting in console errors. Understand that this is expected behavior in development mode to help you identify potential problems. No action is needed unless the double invocation is causing issues with your logic. To avoid seeing this, execute `npm run build` and `serve` in later steps to run a production build.
+:::
 
 ### `npm test`
 
@@ -28,6 +48,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `serve -s build -l 8002`
+
+Serves the production build on port 8002. We intentionally serve this on a specific port (not on a default port) because of the registered `redirect_uri` with DIMO. 
 
 ### `npm run eject`
 
