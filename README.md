@@ -5,7 +5,8 @@ Welcome to the DIMO Hello World applications repository! This repository contain
 - Getting Started 
 - Requirements & Installation
 - List of Examples
-    - [`dimo-create-react-app`](https://github.com/DIMO-Network/dimo-hello-world/tree/main/dimo-create-react-app): An example for [Login to DIMO using Code Exchange Flow](https://docs.dimo.zone/developer-platform/getting-started/authentication/code-exchange-flow)
+    - [`dimo-create-react-app`](https://github.com/DIMO-Network/dimo-hello-world/tree/main/dimo-create-react-app): An example of a client-side application for [Login to DIMO using Code Exchange Flow](https://docs.dimo.zone/developer-platform/getting-started/authentication/code-exchange-flow)
+    - [`sample-web-app`](https://github.com/DIMO-Network/trips-web-app): An example of a full-stack webapp showcasing [Wallet-based Authentication Flow](https://docs.dimo.zone/developer-platform/getting-started/authentication/wallet-based-authentication-flow) using a 3rd party wallet service
 - Contributing
 - License
 - Support
@@ -29,7 +30,7 @@ A general next step would be to install required dependencies, which might look 
 cd <example-directory>
 npm install
 ```
-:exclamation: Always check the README in each directory for specific installation process!
+:exclamation: Always check the README in each directory for specific installation process. Some directories may redirect you to another separate repository, but every example should follow the general guidelines listed here.
 
 ## Contributing
 Contributions to the DIMO Hello World applications are welcome! Please refer to the [CONTRIBUTING](https://github.com/DIMO-Network/dimo-hello-world/blob/main/CONTRIBUTING.md) file for guidelines on how to contribute to this repository.
